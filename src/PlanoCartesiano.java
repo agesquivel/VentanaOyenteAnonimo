@@ -12,12 +12,7 @@ public class PlanoCartesiano extends JFrame {
         Container contenedorPrinc = getContentPane();
         contenedorPrinc.setLayout(new BoxLayout(contenedorPrinc, BoxLayout.Y_AXIS));
 
-        JPanel lienzo = new JPanel();
-        //Obtener el ancho y alto del JFrame
-
-        lienzo.setPreferredSize(new Dimension(800, 400));
-        lienzo.setBackground(Color.BLACK);
-
+        Lienzo lienzo = new Lienzo();
         contenedorPrinc.add(lienzo);
 
         JPanel panelBotones = new JPanel();
@@ -58,10 +53,10 @@ public class PlanoCartesiano extends JFrame {
                     public void actionPerformed(ActionEvent e) {
                         Color colorLienzo = JColorChooser.showDialog(btnColorLienzo,
                                 "Seleccionar color",
-                                lienzo.getBackground());
+                                lienzo.getColorFondo());
 
                         if (colorLienzo != null){
-                            lienzo.setBackground(colorLienzo);
+                            lienzo.setColorFondo(colorLienzo);
                         }
                     }
                 }
