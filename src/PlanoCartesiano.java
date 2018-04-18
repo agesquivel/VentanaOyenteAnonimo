@@ -103,7 +103,7 @@ public class PlanoCartesiano extends JFrame {
 
         plano2D.setSize(800, 600);
         plano2D.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        plano2D.setResizable(false);
+        plano2D.setResizable(true);
         plano2D.setVisible(true);
     }
 
